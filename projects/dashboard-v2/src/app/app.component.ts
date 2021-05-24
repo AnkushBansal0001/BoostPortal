@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dashboard-v2';
+
+  mobileNumber !: string;
+  onUpdateMobileNumber(event: any){
+    this.mobileNumber = event;
+    console.log(this.mobileNumber);
+  }
 }

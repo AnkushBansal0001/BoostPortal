@@ -1,1 +1,16 @@
-<p>icon-button works!</p>
+
+  <button class="focus:outline-none flex justify-center self-center items-center" [ngStyle]="{
+    'background': backgroundColor,
+     'color': color,
+      'font-size': fontSize,
+      'line-height': lineHeight,
+      'border': border,
+      'width': width,
+      'height': height,
+      'font-weight': fontWeight,
+      'border-radius': borderRadius
+    }">
+    <img [src]="iconUrl1" *ngIf="iconUrl1" class="mr-0.5" alt="icon" [ngStyle]="{'width': imageUrl1Width, 'height': imageUrl1Height}">
+    <img [src]="iconUrl2" *ngIf="iconUrl2" class="mr-0.5" alt="icon2" [ngStyle]="{'width': imageUrl2Width, 'height': imageUrl2Height}">
+    {{label}}
+  </button>

@@ -1,0 +1,37 @@
+<div>
+<input type="text"
+inputmode="numeric"
+ onkeypress="return 8===event.keyCode||46===event.keyCode||!isNaN(Number(event.key)) && event.charCode != 32"
+required
+name="mobileNumber"
+pattern="[6-9]{1}[0-9]{9}"
+#mobileNumber="ngModel"
+[(ngModel)]="mobile"
+[placeholder]="placeholder"
+class="focus:outline-none outline-none"
+(change)="onChangeMobileNumber()"
+[ngStyle]="{
+    'border': border,
+    'border-bottom': borderBottom,
+    'color': fontColor,
+    'font-size': fontSize,
+    'line-height': lineHeight,
+    'letter-spacing': letterSpacing,
+    'width': width,
+    'height': height
+  }
+"
+
+[maxlength]="maxLength"
+[minlength]="minLength"
+ >
+
+ <div class="ring-red-400 mt-1" *ngIf="mobileNumber.invalid && (mobileNumber.dirty || mobileNumber.touched)"
+ [ngStyle]="{
+   'font-size' : fontSizeError,
+   'color': colorErrorMsg,
+   'line-height': lineHeightError
+}">
+  {{errorMsg}}
+</div>
+</div>

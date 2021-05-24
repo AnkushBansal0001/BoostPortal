@@ -1,1 +1,14 @@
-<p>outline-button works!</p>
+
+  <button class="focus:outline-none" [ngStyle]="{
+    'background': backgroundColor,
+     'color': color,
+      'font-size': fontSize,
+      'line-height': lineHeight,
+      'border': border,
+      'width': width,
+      'height': height,
+      'font-weight': fontWeight,
+      'border-radius': borderRadius
+    }">
+    {{label}}
+  </button>
