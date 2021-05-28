@@ -1,0 +1,74 @@
+<div class="mainScreen">
+
+  <div>
+  <div class="justify-items-center grid">
+    <img [src]="iconUrl" class=" justify-items-center grid" *ngIf="iconUrl"
+    [ngStyle]="
+    {
+      'width': widthIcon
+       }
+    ">
+  </div>
+
+  <div class="title  justify-items-center grid "
+   *ngIf="title"
+   [ngStyle]="
+   {
+     'color': titleColor,
+     'font-size': fontSizeTitle,
+     'line-height': lineHeightTitle,
+      'font-weight': fontWeightTitle,
+      'margin': marginTitle
+      }
+   "
+   >
+    {{title}}
+  </div>
+  <div class="descriptionWrap justify-items-center grid"  *ngIf="descriptionLine"
+  [ngStyle]="
+  {
+    'color': descriptionColor,
+    'font-size': fontSizeDescription,
+    'line-height': lineHeightDescription,
+     'font-weight': fontWeightDescription,
+     'margin': marginDescription
+     }
+  "
+  >
+    {{descriptionLine}}
+  </div>
+
+  <div class="buttonWrap justify-items-center grid"
+  [ngStyle]="{
+    'margin': marginButton
+  }">
+    <lib-outline-button
+    [label]="buttontext"
+    [backgroundColor]="buttonBgColor"
+    [color]="buttonColor"
+    [fontSize]="fontSizeButton"
+    [lineHeight]="lineHeightButton"
+    [border]="borderButton"
+    [width]="widthButton"
+    [height]="heightButton"
+    [fontWeight]="fontWeightButton"
+    [borderRadius]="borderRadiusButton"
+    ></lib-outline-button>
+
+</div>
+
+</div>
+
+
+<div class="bottomDescLine justify-items-center grid"
+[ngStyle]="{
+  'bottom': bottomDescLineSpace,
+  'color': colorBottomDesc,
+  'font-size': fontSizeBottomDesc,
+  'line-height': lineHeightBottomDesc
+}">
+  {{bottomDescLine}}
+</div>
+
+
+</div>

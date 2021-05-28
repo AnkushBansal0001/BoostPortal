@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-outline-button',
@@ -8,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class OutlineButtonComponent implements OnInit {
 
 
-  backgroundColor = '#FFFFFF';
-  color = '#FFB900';
-  fontSize = '13px';
-  lineHeight = '18px';
-  border = '1px solid #FFB900';
-  width = '286px';
-  height = '37px';
-  fontWeight = '600';
-  borderRadius = '4px';
-  label = 'LOGIN USING USERNAME OR EMAIL '
+  @Input() backgroundColor = '#FFFFFF';
+  @Input() color = '#FFB900';
+  @Input() fontSize = '13px';
+  @Input() lineHeight = '18px';
+  @Input() border = '1px solid #FFB900';
+  @Input() width = '286px';
+  @Input() height = '37px';
+  @Input() fontWeight = '600';
+  @Input() borderRadius = '4px';
+  @Input() label = 'LOGIN USING USERNAME OR EMAIL '
 
   constructor() { }
 

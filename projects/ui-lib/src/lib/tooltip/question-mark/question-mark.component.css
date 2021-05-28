@@ -1,0 +1,42 @@
+.questionMark{
+  cursor: pointer;
+}
+/* tooltip */
+.tooltip {
+  position: relative;
+  display: flex;
+  opacity: 1;
+  z-index: auto;
+}
+.tooltip img {
+  position: relative;
+  z-index: 2;
+}
+.tooltip .tooltiptext {
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  visibility: hidden;
+  position: absolute;
+  z-index: 9;
+  bottom: 21px;
+  left: -10px;
+  width: 150px;
+  padding: 10px;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 9px;
+  border-style: solid;
+  border-color:#FFFFFF transparent transparent transparent;
+}
+.tooltip:hover {
+  cursor: pointer;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

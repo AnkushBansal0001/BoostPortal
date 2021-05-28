@@ -1,0 +1,37 @@
+<div class="mainWrap">
+  <!-- <img [src]="iconUrl" *ngIf="iconUrl" class="iconUrl"> -->
+<input type="text"
+required
+name="textName"
+[pattern]="pattern"
+#textName="ngModel"
+[(ngModel)]="name"
+[placeholder]="placeholder"
+class="focus:outline-none outline-none"
+(onblur)="onChangeMobileNumber()"
+[ngStyle]="{
+    'border': border,
+    'color': fontColor,
+    'font-size': fontSize,
+    'line-height': lineHeight,
+    'letter-spacing': letterSpacing,
+    'width': width,
+    'height': height,
+    'padding': padding,
+    'border-radius': borderRadius
+  }
+"
+[maxlength]="maxLength"
+[minlength]="minLength"
+ >
+
+ <div class="ring-red-400 mt-1" *ngIf="textName.invalid && (textName.dirty || textName.touched)"
+ [ngStyle]="{
+   'font-size' : fontSizeError,
+   'color': colorErrorMsg,
+   'line-height': lineHeightError
+}">
+  {{errorMsg}}
+</div>
+</div>
+

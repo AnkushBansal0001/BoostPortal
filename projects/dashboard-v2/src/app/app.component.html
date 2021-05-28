@@ -11,12 +11,60 @@ Outline Button <br>
 <br>
 
 Icon Label Button <br>
-<lib-icon-button></lib-icon-button>
+<lib-icon-button [iconUrl1]="'assets/images/androidIcon.svg'"></lib-icon-button>
 
 <br>
 <br>
 
 Input Number <br>
-<app-input-number (mobileNumber)="onUpdateMobileNumber($event)"></app-input-number>
+<app-input-number (mobileNumber)="onUpdateMobileNumber($event)" [iconUrl]="'assets/images/androidIcon.svg'"></app-input-number>
 
+
+<br>
+<br>
+
+OTP INPUT <br>
+<app-input-otp></app-input-otp>
+
+<br>
+<br>
+
+Empty screen<br>
+
+<app-empty-screen [iconUrl]="'assets/images/emptyPageIcon.png'" [widthIcon]="'112px'"></app-empty-screen>
+
+
+<br>
+<br>
+<br>
+
+Heading Button
+<lib-heading-button></lib-heading-button>
+
+<br>
+<br>
+<br>
+<br>
+ToolTip
+
+<lib-question-mark [iconUrl]="'assets/images/questionMark.svg'"></lib-question-mark>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+INPUT <br>
+<lib-inuput-text></lib-inuput-text>
+
+<br>
+<br>
+
+
+
+file uploader
+
+<lib-image-uploader></lib-image-uploader>
 </div>

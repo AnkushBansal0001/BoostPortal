@@ -1,0 +1,21 @@
+<div class="questionMark tooltip"
+[ngStyle]="{'width': width}">
+  <img
+  [src]="iconUrl" [ngStyle]="{'width': width}"
+  />
+  <span class="tooltiptext"
+  [ngStyle]="{
+    'background-color': bgColorTooltip,
+    'border': borderTooltip,
+    'box-shadow': boxShadowTooltip,
+    'border-radius': borderRadiusTooltip,
+    'color': colorTooltip,
+    'font-size': fontSizeTooltip,
+    'line-height': lineHeightTooltip
+  }">
+   {{toolTipText}}
+  </span>
+</div>
+
+
+

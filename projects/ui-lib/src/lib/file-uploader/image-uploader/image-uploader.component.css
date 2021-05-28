@@ -1,0 +1,62 @@
+.cardWrap {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardWrap p:hover{
+  cursor: pointer;
+}
+
+
+.firstImage{
+  width: 100%;
+  height: 100%;
+
+}
+.imageWrap {
+  position: relative;
+}
+.morePhotos{
+  width: 62px;
+  height: 62px;
+  border: 1px solid #E4E4E4;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 17px;
+  right: 14px;
+}
+.relative{
+  position: relative;
+}
+.morePhotosBgImage{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.spanTagFeaturedImage{
+  position: relative;
+}
+.inputFileType{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+  width: 100%;
+}

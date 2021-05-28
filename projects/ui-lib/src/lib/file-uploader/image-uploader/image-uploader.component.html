@@ -1,0 +1,53 @@
+<div class="cardWrap"
+[ngStyle]="{
+  'width':  widthCard,
+  'height': heightCard,
+  'border-radius': borderRadiusCard,
+  'background-color': backgroundColorCard,
+  'border': borderCard
+}">
+  <div class="imageWrap mx-auto" [ngStyle]="{
+    'border-radius': borderRadiusImage,
+    'background-color': backgroundColorImage,
+    'width': widthImage,
+    'height': heightImage,
+    'border': borderImage
+  }">
+
+  <img [src]="emptyImageUrl" [ngStyle]="{
+    'width': '100%',
+    'height': '100%'
+  }"
+  *ngIf="!imagesArray || !imagesArray.length"
+  >
+
+  <div class="images" *ngIf="imagesArray && imagesArray.length">
+    <div class="relative">
+      <img class="firstImage" src="{{imagesArray[0]}}">
+      <div class="morePhotos" *ngIf="imagesArray.length > 1"
+        >
+        <img class="morePhotosBgImage" src="{{imagesArray[1]}}">
+        + {{imagesArray.length - 1}} <br> Photos
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+  <p [ngStyle]="{
+    'color': colorText,
+    'text-transform': 'uppercase',
+    'text-decoration-line': 'underline',
+    'font-size': fontSizeText,
+    'line-height': lineHeightText,
+    'font-weight': fontWeightText,
+    'text-align': 'center'
+  }">
+  <span class="spanTagFeaturedImage">
+    <input type="file" class="inputFileType">
+    Add featured image
+  </span>
+
+  </p>
+</div>

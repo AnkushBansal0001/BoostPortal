@@ -29,6 +29,8 @@ export class InputNumberComponent implements OnInit {
   @Input() borderBottom = '1px solid #FFB900';
 
   @Input() placeholderColor = '#747474';
+  @Input() padding = '0 0 0 30px';
+  @Input() iconUrl = '';
 
   constructor() {
     document.documentElement.style.setProperty(

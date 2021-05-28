@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonModule, FormModule } from '@boost/ui';
+import { ButtonModule, FormModule, EmptyModule, TooltipModule, FileUploaderModule} from '@boost/ui';
 
 
 @NgModule({
@@ -13,7 +13,10 @@ import { ButtonModule, FormModule } from '@boost/ui';
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    FormModule
+    FormModule,
+    EmptyModule,
+    TooltipModule,
+    FileUploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
