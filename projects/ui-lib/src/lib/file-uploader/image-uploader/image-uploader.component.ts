@@ -26,10 +26,22 @@ export class ImageUploaderComponent implements OnInit {
   fontWeightText = '600';
 
   emptyImageUrl = 'assets/images/emptyImageUploader.png';
-  imagesArray = ['assets/images/dummyImage.png', 'assets/images/dummyImage.png']
+  // imagesArray = ['assets/images/dummyImage.png', 'assets/images/dummyImage.png', 'assets/images/dummyImage.png']
+  imagesArray = []
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onFileDropped(event: any){
+    let target = event.target as HTMLInputElement;
+    let files = target.files as any;
+    this.postApiFile(files[0]);
+  }
+
+  postApiFile(file: any){
+    console.log(file);
+
+    // api for file uploading
+  }
 }

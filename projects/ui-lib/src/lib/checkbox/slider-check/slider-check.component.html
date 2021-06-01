@@ -1,0 +1,43 @@
+<div
+[ngStyle]="{
+  'width': widthCheckbox,
+  'height': heightCheckbox,
+  'background-color': isActive ? backgroundColorCheckboxActive : backgroundColorCheckboxDeactive,
+  'border-radius': borderRadiusCheckbox,
+  'display': 'flex',
+  'justify-content': 'space-evenly',
+  'align-items': 'center'
+}" (click)="onChangeSlide()">
+
+  <span class="text-checkbox" *ngIf="isActive"
+  [ngStyle]="{
+    'font-size': fontSize,
+    'line-height': lineHeight,
+    'color': color,
+    'font-weight': fontWeight
+  }"
+  >
+    Yes
+  </span>
+  <span [ngStyle]="{
+    'width': '16px',
+    'height': '16px',
+    'border-radius': '50%',
+    'background-color': '#FFFFFF'
+  }">
+
+  </span>
+
+  <span class="text-checkbox" *ngIf="!isActive"
+  [ngStyle]="{
+    'font-size': fontSize,
+    'line-height': lineHeight,
+    'color': color,
+    'font-weight': fontWeight
+  }"
+  >
+    No
+  </span>
+
+
+</div>

@@ -1,0 +1,52 @@
+<div [ngStyle]="{
+  'width': widthCard,
+  'height': heightCard,
+  'min-height': minHeightCard,
+  'border-radius': borderRadiusCard,
+  'border': borderCard,
+  'background-color': backgroundColorCard,
+  'padding': paddingCard
+}">
+  <div class="status">
+
+  </div>
+
+  <img [ngStyle]="{
+    'border-radius': borderRadiusImage,
+    'width': widthImage,
+    'height': heightImage,
+    'border': borderImage
+  }" src="#">
+  <h3 [ngStyle]="{
+    'color': colorTitle,
+    'font-size': fontSizeTitle,
+    'line-height': lineHeightTitle,
+    'margin': '13px 0 0 0'
+  }">
+    Christmas Offer 2020
+  </h3>
+  <div [ngStyle]="{
+    'font-size': fontSizePriceCategory,
+    'color': colorPriceCategory,
+    'line-height': lineHeightPriceCategory,
+    'margin': '6.25px 0 0 0'
+  }">
+    <span [ngStyle]="{'font-weight': fontWeightPrice, 'color': colorPrice}">
+      ₹ 5,000 OFF
+    </span>
+      on
+     <span [ngStyle]="{'font-weight': fontWeightCategory}">
+      Simple Massage
+     </span>
+
+  </div>
+
+  <p [ngStyle]="{
+    'color': descriptionColor,
+    'font-size': fontSizeDescription,
+    'line-height': lineHeightDescription,
+    'margin-top': '8.9px'
+  }">
+    This is the christmas offer of this year. Customers will get discount on Simple Massage.
+  </p>
+</div>

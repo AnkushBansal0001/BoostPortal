@@ -14,20 +14,28 @@
     'border': borderImage
   }">
 
-  <img [src]="emptyImageUrl" [ngStyle]="{
-    'width': '100%',
-    'height': '100%'
-  }"
-  *ngIf="!imagesArray || !imagesArray.length"
-  >
+  <div class="input-empty-image">
+    <img [src]="emptyImageUrl" [ngStyle]="{
+      'width': '100%',
+      'height': '100%'
+    }"
+    *ngIf="!imagesArray || !imagesArray.length"
+    >
+    <input type="file" class="inputFileType"
+    #fileDropRef id="fileDropRef" multiple (change)="onFileDropped($event)">
+  </div>
+
 
   <div class="images" *ngIf="imagesArray && imagesArray.length">
     <div class="relative">
       <img class="firstImage" src="{{imagesArray[0]}}">
       <div class="morePhotos" *ngIf="imagesArray.length > 1"
         >
-        <img class="morePhotosBgImage" src="{{imagesArray[1]}}">
-        + {{imagesArray.length - 1}} <br> Photos
+        <img class="more-photos-bg-image" src="{{imagesArray[1]}}">
+        <div class="number-on-photos">
+          + {{imagesArray.length - 1}} <br> Photos
+        </div>
+
       </div>
     </div>
 
@@ -45,7 +53,8 @@
     'text-align': 'center'
   }">
   <span class="spanTagFeaturedImage">
-    <input type="file" class="inputFileType">
+    <input type="file" class="inputFileType"
+     #fileDropRef id="fileDropRef" multiple (change)="onFileDropped($event)">
     Add featured image
   </span>
 
