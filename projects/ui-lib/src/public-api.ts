@@ -33,3 +33,8 @@ export * from './lib/checkbox/slider-check/slider-check.component';
 
 export * from './lib/card/card.module';
 export * from './lib/card/offers-card/offers-card.component';
+
+export * from './lib/deactivate-screen/deactivate-screen.module';
+export * from './lib/deactivate-screen/deactivate/deactivate.component';
+
+

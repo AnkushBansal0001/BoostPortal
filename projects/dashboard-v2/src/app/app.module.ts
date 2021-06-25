@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonModule, FormModule, EmptyModule,
    TooltipModule, FileUploaderModule, CheckboxModule,
-  CardModule} from '@boost/ui';
+  CardModule, DeactivateScreenModule} from '@boost/ui';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import { ButtonModule, FormModule, EmptyModule,
     TooltipModule,
     FileUploaderModule,
     CheckboxModule,
-    CardModule
+    CardModule,
+    DeactivateScreenModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,22 +1,66 @@
-<div [ngStyle]="{
+<div class="card" [ngStyle]="{
   'width': widthCard,
   'height': heightCard,
   'min-height': minHeightCard,
   'border-radius': borderRadiusCard,
-  'border': borderCard,
+  'border': hovered == false ?  borderCard : hoverBorderCard,
   'background-color': backgroundColorCard,
-  'padding': paddingCard
-}">
-  <div class="status">
+  'padding': paddingCard,
+  'box-shadow': hovered == true ? boxShadowCard : 'none'
+}"
+(mouseover)="hovered = true"
+(mouseout)="hovered = false"
+>
+  <div class="activated-state-box" [ngStyle]="{
+    'background-color':  hovered == false  ? backgroundColorActivatedState: activeBackgroundColorState,
+    'border':  hovered == false  ? borderActivatedState : '',
+    'width': widthActivatedState,
+    'height': heightActivatedState,
+    'position': 'absolute',
+    'right': '0px',
+    'top': '9px',
+    'border-radius': borderRadiusActivatedState,
+    'border-right': 'none'
+  }">
 
+    <img [ngStyle]="{
+      'width': '13px',
+      'height': '13px'
+    }" [src]="blinkingDotUrl">
+
+    <span [ngStyle]="{
+      'color': hovered == false  ? colorState : activeColorState,
+      'font-size': fontSizeState,
+      'line-height': lineHeightState,
+      'font-weight': fontSizeState
+    }">
+      ONGOING
+    </span>
+
+    <span
+    [ngStyle]="{
+      'border':  hovered == false  ? '1px solid #4A4A4A' : '1px solid #FFFFFF',
+      'width': '0',
+      'height': '13px'
+    }">
+
+    </span>
+
+    <img [src]="arrowImageUrl" alt="arrowImageUrl" [ngStyle]="{
+      'width': widthArrowIcon,
+      'height': heightArrowIcon
+    }">
+    <!-- <span>
+
+    </span> -->
   </div>
 
   <img [ngStyle]="{
     'border-radius': borderRadiusImage,
     'width': widthImage,
     'height': heightImage,
-    'border': borderImage
-  }" src="#">
+    'border' : borderImage
+  }" [src]="imageUrl">
   <h3 [ngStyle]="{
     'color': colorTitle,
     'font-size': fontSizeTitle,

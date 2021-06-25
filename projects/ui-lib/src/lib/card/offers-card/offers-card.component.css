@@ -1,0 +1,9 @@
+.card {
+  position: relative;
+  cursor: pointer;
+}
+.activated-state-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

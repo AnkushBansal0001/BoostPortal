@@ -1,7 +1,5 @@
-
-
- <div id="divOuter">
-  <div id="divInner">
-<input id="partitioned" type="text" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  onKeyPress="if(this.value.length==4) return false;"/>
-  </div>
-</div>
+<ng-otp-input
+(onInputChange)="onOtpChange($event)"
+[config]="{length:4, containerStyles: {border: 'none'}}" [ngStyle]="{
+border: 'none'
+}"></ng-otp-input>

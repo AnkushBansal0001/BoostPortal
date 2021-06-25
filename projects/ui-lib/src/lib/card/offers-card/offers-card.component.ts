@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-offers-card',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./offers-card.component.css']
 })
 export class OffersCardComponent implements OnInit {
+  hovered: any = false;
 
   constructor() { }
 
@@ -16,8 +17,9 @@ export class OffersCardComponent implements OnInit {
   borderRadiusCard = '10px';
   backgroundColorCard = '#FFFFFF';
   borderCard = '1px solid #E2E2E2';
+  hoverBorderCard = '1px solid #27AE60';
   paddingCard = '19px 22px';
-
+  boxShadowCard = '0px 0px 7.26259px #D8D8D8';
   // image css
   borderImage = '1px solid #E2E2E2';
   borderRadiusImage = '4px';
@@ -43,6 +45,31 @@ export class OffersCardComponent implements OnInit {
   fontSizeDescription = '12px';
   lineHeightDescription = '16px';
 
+  // image path
+  @Input() imageUrl ='';
+
+  // activated state
+  backgroundColorActivatedState = '#FFFFFF';
+  activeBackgroundColorActivatedState = '#FFFFFF';
+  borderActivatedState= '1px solid #E2E2E2';
+  widthActivatedState= '107px';
+  heightActivatedState= '22px';
+  borderRadiusActivatedState= '4px';
+
+  @Input() blinkingDotUrl = '';
+
+  colorState= '#27AE60';
+  activeColorState = '#FFFFFF';
+  fontSizeState= '10px';
+  lineHeightState= '14px';
+
+  backgroundColorState = '#FFFFFF';
+  activeBackgroundColorState = '#27AE60';
+
+  widthArrowIcon = '14px';
+  heightArrowIcon = '14px';
+
+  @Input() arrowImageUrl = 'assets/images/boostLink.svg';
   ngOnInit(): void {
   }
 

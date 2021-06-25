@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-input-otp',
@@ -16,7 +16,15 @@ export class InputOtpComponent implements OnInit {
   border= 'none';
   color = '#4A4A4A';
 
+
   ngOnInit() {
   }
 
+  // @ViewChild('ngOtpInput') ngOtpInputRef:any;//Get reference using ViewChild and the specified hash
+  // yourMethod(){
+  //   this.ngOtpInputRef.setValue(yourValue);//yourvalue can be any string or number eg. 1234 or '1234'
+  // }#4A4A4A
+  onOtpChange(data: any){
+    console.log(data);
+  }
 }
